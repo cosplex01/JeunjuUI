@@ -77,3 +77,29 @@
   border: 0;
   background: #ffffff;  
 }
+/* 음료 콘텐츠 */
+.app-main{
+  background-color: yellowgreen;
+  padding:0 20px;
+}
+.ediya-menu{
+  background-color: skyblue;
+  display:grid;
+  /* width:768px; */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin:0 auto;
+  
+}
+.ediya-menu__item{
+  background-color: pink;
+}
+/* 2단구조로 분류 하기 위한 조건식 표시 */
+@media screen and (min-width: 769px){
+  .ediya-menu{
+    max-width: 968px;
+    grid-template-columns: repeat(2, 1fr);    
+  }
+}
