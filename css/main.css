@@ -34,46 +34,103 @@ body {
   clip: rect(0,0,0,0);
   clip-path: polygon(0 0, 0 0, 0 0);
 }
-/* 공통에니메이션 */
-@keyframes transform-none{
-  to{
-    transform: none;
+/* 공통 애니메이션 */
+/* @keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
     opacity: 1;
   }
 }
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes fadeSlideInFromRight{
+  0%{
+    opacity: 0;
+    transform: translateX(4em)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeSlideInFromLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-8em);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeSlideInFromTop{
+  0%{
+    opacity: 0;
+    transform: translateY(-4em);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeSlideUpFromBottom{
+  0%{
+    opacity: 0;
+    transform: translateY(4em);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+@keyframes transformNone{
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
 .ediya-menu__item{
-  animation-name:transform-none;
   opacity: 0;
-  transform:translateY(4em); 
-  animation-duration: 0.4s;
+  transform: translateY(4em);
+  animation-name: transformNone;
+  animation-duration:  0.35s;
   animation-fill-mode: forwards;
 }
 .ediya-menu__item:nth-child(1){
-  animation-duration:0.4s;
+  animation-duration: 0.4s;
 }
 .ediya-menu__item:nth-child(2){
-  animation-duration:0.6s;
+  animation-duration: 0.8s;
 }
 .ediya-menu__item:nth-child(3){
-  animation-duration:0.8s;
+  animation-duration: 1.2s;
 }
 .ediya-menu__item:nth-child(4){
-  animation-duration:1.0s;
+  animation-duration: 1.6s;
 }
-.button[aria-label="메뉴 열기"]{
+
+.app-header{
   opacity: 0;
-  transform:translateX(4em);
-  animation:transform-none 0.8s 0.5s forwards;  
+  transform: translateY(-4em);
+  animation: transformNone 0.35s 0.4s forwards;
 }
 .brand{
   opacity: 0;
-  transform:translateX(-8em);
-  animation:transform-none 0.8s 0.5s forwards;  
+  transform: translateX(-8em);
+  animation: transformNone 0.3s 0.7s forwards; 
 }
-.app-header{
+.button[aria-label="메뉴 열기"]{
   opacity: 0;
-  transform:translateY(-4em);
-  animation:transform-none 0.35s 0.4s forwards;  
+  transform: translateX(4em);
+  animation: transformNone 0.45s 0.4s forwards;
 }
 
 /* 헤더 */
@@ -173,7 +230,6 @@ body {
 }
 .ediya-menu__item{
   position: relative;
-  background-color:yellow;
 }
 .ediya-menu__item a{
   display: block
@@ -210,7 +266,7 @@ body {
   right: 0;
   bottom: 0;
   padding: 2em;
-  opacity: 1;
+  opacity: 0;
 }
 .ediya-menu__item--detail.is-active {
   opacity: 1;
@@ -238,7 +294,7 @@ body {
   column-fill: auto;
   column-rule: 1px solid #999;
   padding: 1em 2em;
-  column-gap: 2em;
+  column-gap: 1em;
   background: #f8f8f8;
 }
 .ediya-menu__item--multi-column.is-2{
