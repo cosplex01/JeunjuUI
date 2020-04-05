@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    @keyframes scaleText{
+      0%{
+        font-size: 16px;
+        opacity: 1;
+      }
+      100%{
+        font-size: 48px;
+        opacity: 1;
+      }
+    }
+    .text{
+      opacity: 0;
+      background-color: aqua;
+      /* animation-name: scaleText;
+      animation-duration: 1000ms;
+      animation-fill-mode: forwards; 
+      animation-iteration-count: 3;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;   
+      animation-play-state: running;
+      animation-delay: 2s; */
+      animation:scaleText 1000ms forwards 3 alternate ease-in-out running 2s;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>css 에니메이션</h1>
+  <div class="text">
+    Figma를 활용한 모바일 웹 UI 제작 실습
+  </div>
+</body>
+</html>

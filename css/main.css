@@ -34,6 +34,63 @@ body {
   clip: rect(0,0,0,0);
   clip-path: polygon(0 0, 0 0, 0 0);
 }
+/* 공통에니메이션 */
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }  
+}
+@keyframes fadeSlideInFromRight{
+  0%{
+    opacity: 0;
+    transform:translateX(4em);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeSlideInFromLeft{
+  0%{
+    opacity: 0;
+    transform:translateX(-8em);  
+  }
+  100%{
+    opacity: 1;
+    transfrom:translateX(0);
+  }
+}
+@keyframes fadeSlideInFromTop{
+  0%{
+    opacity: 0;
+    transform:translateY(-4em);  
+  }
+  100%{
+    opacity: 1;
+    transfrom:translateY(0);
+  }
+}
+.button[aria-label="메뉴 열기"]{
+  animation:fadeSlideInFromRight 0.8s 0.5s forwards;  
+}
+.brand{
+  animation:fadeSlideInFromLeft 0.8s 0.5s forwards;  
+}
+.app-header{
+  animation:fadeSlideInFromTop 0.35s 0.4s forwards;  
+}
+
 /* 헤더 */
 .app-header{
   background-color: rgba(255,255,255,0.4);
